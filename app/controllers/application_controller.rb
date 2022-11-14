@@ -3,7 +3,13 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    "Welcome to MovieBuddy DB!"
   end
+
+  get "/movies" do
+    movie = Movie.all 
+    movie.to_json
+  end
+  
 
 end
